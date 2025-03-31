@@ -31,12 +31,8 @@ public class Nrainhas {
     }
 
     public static void PrintTab(int tab[][]){//Printando Tabuleiro
-
-        
-
         int n = tab.length;
-
-     System.out.println("\nTabuleiro:");
+        System.out.println("\nTabuleiro:");
 
         for (int i = 0; i < n; i++) {
          System.out.print("| ");
@@ -52,28 +48,21 @@ public class Nrainhas {
 }
 
     public static boolean resolv(int tabu[][], int linha){//Resolvendo o Tabuleiro
-
         int n = tabu.length;
-
+        
         if (linha >= n) {
-            return true;
-            
+            return true; 
         }
 
         for(int i = 0; i < n; i++){
-
             if (tabu[linha][i] == 0) {
-
                 if (verifica(tabu, linha, i) == true) {
                     tabu[linha][i] = 1;
                     if (resolv(tabu, linha + 1)) {
                        return true;
-                    }
-                    
+                    }    
                     tabu[linha][i] = 0;
                 }
-
-                
             }
         }
 
