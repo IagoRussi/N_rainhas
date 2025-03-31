@@ -81,22 +81,19 @@ public class Nrainhas {
 
             
     }
-    public static void main(String[] args) {//Definindo tabuleiro e exibição da Resolução
+    public static void main(String[] args) { //Resolvendo Tabuleiro
 
         Scanner input = new Scanner(System.in); 
 
-        System.out.println("Digite o valor de N (Tabuleiro N/N): ");
+        System.out.println("Digite o valor de N (Tabuleiro N/N): "); //Definindo Tabuleiro
         int N = input.nextInt();
-
-        //Definindo Tabuleiro
-
-        int[][] tabuleiro = new int [N][N];
+        int[][] tabuleiro = new int [N][N]; 
 
         if (resolv(tabuleiro, 0) == true) {
             System.out.println("Problema de N rainhas resolvido");
             PrintTab(tabuleiro);
             
-        }
+        }else System.out.println("Erro!");
         
 
         input.close();
